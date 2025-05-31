@@ -47,7 +47,7 @@ export default function Header() {
             <div className="header-container">
                 <div className="header-logo">
                     <Image 
-                        src="/digigoat-logo.png" 
+                        src="/digigoat-logo-2.png" 
                         alt="DIGIGOAT" 
                         className="header-logo-image"
                         width={160}
