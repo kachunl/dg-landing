@@ -64,7 +64,7 @@ export default function Header() {
                         What We Do
                     </button>
 
-                    <button onClick={() => scrollToSection("contact")} className="header-nav-link">
+                    <button onClick={() => scrollToSection("footer")} className="header-nav-link">
                         Let's Chat
                     </button>
                 </nav>
