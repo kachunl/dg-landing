@@ -45,26 +45,26 @@ export default function Header() {
     return (
         <header className={`header ${isScrolled ? "scrolled" : ""} ${isVisible ? "visible" : "hidden"}`}>
             <div className="header-container">
-                <div className="logo">
+                <div className="header-logo">
                     <Image 
                         src="/digigoat-logo.png" 
                         alt="DIGIGOAT" 
-                        className="logo-image"
+                        className="header-logo-image"
                         width={160}
                         height={36}
                     />
                 </div>
                 
-                <nav className="nav">
-                    <button onClick={() => scrollToSection("work")} className="nav-link">
-                        What We Do
-                    </button>
-
-                    <button onClick={() => scrollToSection("about")} className="nav-link">
+                <nav className="header-nav">
+                    <button onClick={() => scrollToSection("about")} className="header-nav-link">
                         Who We Are
                     </button>
 
-                    <button onClick={() => scrollToSection("contact")} className="nav-link">
+                    <button onClick={() => scrollToSection("work")} className="header-nav-link">
+                        What We Do
+                    </button>
+
+                    <button onClick={() => scrollToSection("contact")} className="header-nav-link">
                         Let's Chat
                     </button>
                 </nav>
