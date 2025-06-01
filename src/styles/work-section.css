@@ -36,7 +36,7 @@
 }
 
 .project-card-new:hover .project-header {
-    background: rgba(0, 0, 0, 0.85);
+    background: rgba(255, 255, 255, 0.85);
     border-bottom: none;
 }
 
@@ -51,7 +51,7 @@
 }
 
 .project-card-new:hover .project-title-new {
-    color: #fff;
+    color: #000000;
 }
 
 .project-image-new {
