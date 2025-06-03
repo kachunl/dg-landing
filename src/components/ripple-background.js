@@ -101,8 +101,8 @@ export default function RippleBackground() {
             pushEffectsRef.current.push({
                 x: e.clientX,
                 y: e.clientY,
-                strength: 0.8,
-                radius: 200,
+                strength: 1.4,
+                radius: 250,
                 decay: 0.95
             })
 
