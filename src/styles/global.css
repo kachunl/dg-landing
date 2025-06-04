@@ -93,3 +93,22 @@ a {
     letter-spacing: 1px;
     margin: 0;
 }
+
+
+@media (max-width: 768px) {
+    .section-container-new {
+        padding: 0 2rem;
+    }
+
+    .section-header {
+        flex-direction: column;
+        gap: 2rem;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-title-new {
+        font-size: 1.5rem;
+    }
+}

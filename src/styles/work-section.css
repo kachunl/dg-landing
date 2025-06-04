@@ -148,3 +148,15 @@
     width: 20px;
     height: 20px;
 }
+
+@media (max-width: 1024px) {
+    .project-card-new {
+        flex: 0 0 calc(33.333% - 1.33rem);
+    }
+}
+
+@media (max-width: 768px) {
+    .project-card-new {
+        flex: 0 0 calc(33.333% - 1.33rem);
+    }
+}

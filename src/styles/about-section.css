@@ -18,3 +18,22 @@
     color: #fff;
     margin-bottom: 2rem;
 }
+
+@media (max-width: 1024px) {
+    .about-content-new {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-text-left p {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-text-left p {
+        font-size: 1.5rem;
+    }
+}

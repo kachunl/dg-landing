@@ -79,3 +79,47 @@
 .header-nav-link:hover {
     color: #8b5cf6;
 }
+
+@media (max-width: 1024px) {
+    .header-container {
+        padding: 0 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-logo-image {
+        height: 35px;
+    }
+
+    .header-nav {
+        gap: 2rem;
+    }
+
+    .header-nav-link {
+        padding: 0.6rem 0 0.2rem 0;
+        font-size: 0.8rem;
+    }
+
+    .header-container {
+        padding: 0 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-logo-image {
+        height: 30px;
+    }
+
+    .header-nav {
+        gap: 1.5rem;
+    }
+
+    .header-nav-link {
+        padding: 0.5rem 0 0.2rem 0;
+        font-size: 0.75rem;
+    }
+
+    .header-container {
+        padding: 0 1.5rem;
+    }
+}

@@ -115,3 +115,40 @@
     color: #ffffff;
     max-width: 250px;
 }
+
+@media (max-width: 1024px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .footer-right {
+        align-items: flex-start;
+        text-align: left;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        padding: 0 2rem;
+    }
+
+    .footer-acknowledgment {
+        max-width: 100%;
+    }
+
+    .footer {
+        margin: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer {
+        padding: 3rem 0;
+        margin: 1rem;
+    }
+
+    .footer-container {
+        padding: 0 1.5rem;
+    }
+}
