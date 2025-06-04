@@ -1,29 +1,32 @@
 import { Asterisk } from "lucide-react"
-import "@/styles/about-section.css"
+import styles from "@/styles/about.module.css"
 
 export default function AboutSection() {
     return (
-        <section id="about" className="about-section-new">
-            <div className="section-container-new">
-                <div className="section-header">
-                    <div className="title-with-icon">
-                        <Asterisk className="section-icon" />
+        <section id="about" className={styles.aboutSection}>
+            <div className={styles.sectionContainer}>
+                <div className={styles.sectionHeaderAbout}>
 
-                        <h2 className="section-title-new">WHO WE ARE</h2>
+                    <div className={styles.titleWithIcon}>
+                        <Asterisk className={styles.sectionIcon} />
+                        
+                        <h2 className={styles.sectionTitle}>WHO WE ARE</h2>
                     </div>
+
                 </div>
 
-                <div className="about-content-new">
-                    <div className="about-text-left">
+                <div className={styles.aboutContent}>
+
+                    <div className={styles.aboutTextLeft}>
                         <p>
-                            DIGIGOAT, Marketing agency based in
+                            DIGIGOAT is a <span className={styles.underlined}>marketing</span> agency based in
                             Milan, Italy.
                         </p>
                     </div>
 
-                    <div className="about-text-right">
+                    <div className={styles.aboutTextRight}>
                         <p>
-                            We specialise in wordpress bla bla bla bla bla bla bla
+                            We specialise in 
                         </p>
                     </div>
 

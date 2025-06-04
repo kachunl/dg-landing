@@ -1,52 +1,52 @@
 import { ArrowUpRight } from "lucide-react"
-import "@/styles/footer.css"
+import styles from "@/styles/footer.module.css"
 
 export default function Footer() {
     return (
-        <footer id="footer" className="footer">
-            <div className="footer-inner">
-                <div className="footer-container">
+        <footer className={styles.footer}>
+            <div className={styles.footerInner}>
+                <div className={styles.footerContainer}>
+                    <div className={styles.footerContent}>
 
-                    <div className="footer-content">
-                        <div className="footer-left">
-                            <div className="footer-links">
-                                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="footer-link">
+                        <div className={styles.footerLeft}>
+                            <div className={styles.footerLinks}>
+                                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className={styles.footerLink}>
                                     LINKEDIN
-                                    <ArrowUpRight className="footer-arrow" />
+                                    <ArrowUpRight className={styles.footerArrow} />
                                 </a>
 
-                                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="footer-link">
+                                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className={styles.footerLink}>
                                     INSTAGRAM
-                                    <ArrowUpRight className="footer-arrow" />
+                                    <ArrowUpRight className={styles.footerArrow} />
                                 </a>
-                                
-                                <a href="mailto:hello@digigoat.com" className="footer-link">
+
+                                <a href="mailto:ezramavani@thedigigoat.com" className={styles.footerLink}>
                                     EMAIL
-                                    <ArrowUpRight className="footer-arrow" />
+                                    <ArrowUpRight className={styles.footerArrow} />
                                 </a>
                             </div>
 
-                            <div className="footer-acknowledgment">
+                            <div className={styles.footerAcknowledgment}>
                                 <p>
-                                    DIGIGOAT is a Milan based Marketing agency vnaofuwnfawkfjwanfa
+                                    DIGIGOAT is a wnjdkajbawfkjawnf.
                                 </p>
                             </div>
                         </div>
 
-                        <div className="footer-right">
-                            <div className="footer-contact-info">
-                                <div className="contact-item">
-                                    <span className="contact-label">EMAIL</span>
-                                    <span className="contact-value">ezramavani@digigoat.com</span>
+                        <div className={styles.footerRight}>
+                            <div className={styles.footerContactInfo}>
+                                <div className={styles.contactItem}>
+                                    <span className={styles.contactLabel}>EMAIL</span>
+                                    <span className={styles.contactValue}>ezramavani@thedigigoat.com</span>
                                 </div>
 
-                                <div className="contact-item">
-                                    <span className="contact-label">PHONE</span>
-                                    <span className="contact-value">+60 123-4567</span>
+                                <div className={styles.contactItem}>
+                                    <span className={styles.contactLabel}>PHONE</span>
+                                    <span className={styles.contactValue}>+60 123-4567</span>
                                 </div>
                             </div>
-                            
-                            <div className="footer-address">42 Puncak Road, Ampang, KL 56000</div>
+
+                            <div className={styles.footerAddress}>42 Puncak Street, Ampang, KL 43000</div>
                         </div>
 
                     </div>

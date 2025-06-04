@@ -1,13 +1,14 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import Image from "next/image"
-import "@/styles/header.css"
+import { Menu, X } from "lucide-react"
+import styles from "@/styles/header.module.css"
 
 export default function Header() {
     const [isScrolled, setIsScrolled] = useState(false)
     const [isVisible, setIsVisible] = useState(true)
     const [lastScrollY, setLastScrollY] = useState(0)
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
     useEffect(() => {
         const handleScroll = () => {
@@ -21,6 +22,7 @@ export default function Header() {
             
             else if (currentScrollY > lastScrollY) {
                 setIsVisible(false)
+                setIsMobileMenuOpen(false)
             } 
             
             else {
@@ -34,37 +36,71 @@ export default function Header() {
         return () => window.removeEventListener("scroll", handleScroll)
     }, [lastScrollY])
 
+    useEffect(() => {
+        if (isMobileMenuOpen) {
+            document.body.style.overflow = "hidden"
+        } 
+        
+        else {
+            document.body.style.overflow = ""
+        }
+
+        return () => {
+            document.body.style.overflow = ""
+        }
+    }, [isMobileMenuOpen])
+
     const scrollToSection = (sectionId) => {
         const element = document.getElementById(sectionId)
         
         if (element) {
             element.scrollIntoView({ behavior: "smooth" })
         }
+
+        setIsMobileMenuOpen(false)
+    }
+
+    const toggleMobileMenu = () => {
+        setIsMobileMenuOpen(!isMobileMenuOpen)
     }
 
     return (
-        <header className={`header ${isScrolled ? "scrolled" : ""} ${isVisible ? "visible" : "hidden"}`}>
-            <div className="header-container">
-                <div className="header-logo">
-                    <Image 
-                        src="/digigoat-logo-2.png" 
-                        alt="DIGIGOAT" 
-                        className="header-logo-image"
-                        width={160}
-                        height={36}
-                    />
+        <header
+            className={`${styles.header} ${isScrolled ? styles.scrolled : ""} ${isVisible ? styles.visible : styles.hidden}`}
+        >
+            <div className={styles.headerContainer}>
+                <div className={styles.logo}>
+                    <img src="/digigoat-logo-2.png" alt="DIGIGOAT" className={styles.logoImage} />
                 </div>
-                
-                <nav className="header-nav">
-                    <button onClick={() => scrollToSection("about")} className="header-nav-link">
+
+                <nav className={`${styles.nav} ${styles.desktopNav}`}>
+                    <button onClick={() => scrollToSection("work")} className={styles.navLink}>
                         Who We Are
                     </button>
 
-                    <button onClick={() => scrollToSection("work")} className="header-nav-link">
+                    <button onClick={() => scrollToSection("about")} className={styles.navLink}>
                         What We Do
                     </button>
 
-                    <button onClick={() => scrollToSection("footer")} className="header-nav-link">
+                    <button onClick={() => scrollToSection("footer")} className={styles.navLink}>
+                        Let's Chat
+                    </button>
+                </nav>
+
+                <button className={styles.mobileMenuButton} onClick={toggleMobileMenu} aria-label="Toggle menu">
+                    {isMobileMenuOpen ? <X className={styles.menuIcon} /> : <Menu className={styles.menuIcon} />}
+                </button>
+
+                <nav className={`${styles.mobileNav} ${isMobileMenuOpen ? styles.open : ""}`}>
+                    <button onClick={() => scrollToSection("work")} className={styles.mobileNavLink}>
+                        Who We Are
+                    </button>
+
+                    <button onClick={() => scrollToSection("about")} className={styles.mobileNavLink}>
+                        What We Do
+                    </button>
+
+                    <button onClick={() => scrollToSection("footer")} className={styles.mobileNavLink}>
                         Let's Chat
                     </button>
                 </nav>

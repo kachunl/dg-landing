@@ -2,7 +2,7 @@
 
 import { useState, useRef, useEffect } from "react"
 import { Eye, ChevronLeft, ChevronRight } from "lucide-react"
-import "@/styles/work-section.css"
+import styles from "@/styles/work.module.css"
 
 export default function WorkSection() {
     const [currentIndex, setCurrentIndex] = useState(0)
@@ -45,12 +45,21 @@ export default function WorkSection() {
     // update visible projects count based on screen size
     useEffect(() => {
         const updateVisibleProjects = () => {
-        // always show 3 projects regardless of screen size
-            setVisibleProjects(3)
+            if (window.innerWidth <= 768) {
+                setVisibleProjects(1)
+            } 
+            
+            else {
+                setVisibleProjects(3)
+            }
         }
 
         // set initial value
         updateVisibleProjects()
+
+        // add resize listener
+        window.addEventListener("resize", updateVisibleProjects)
+        return () => window.removeEventListener("resize", updateVisibleProjects)
     }, [])
 
     const maxIndex = Math.max(0, projects.length - visibleProjects)
@@ -64,58 +73,64 @@ export default function WorkSection() {
     }
 
     return (
-        <section id="work" className="work-section-new">
-            <div className="section-container-new">
-                <div className="section-header">
+        <section id="work" className={styles.workSection}>
+            <div className={styles.sectionContainer}>
+                <div className={styles.sectionHeader}>
+                    <div className={styles.sectionTitleRow}>
 
-                    <div className="section-title-row">
-                        <div className="title-with-icon">
-                            <Eye className="section-icon" />
-                            <h2 className="section-title-new">SEE SOME OF OUR WORK</h2>
+                        <div className={styles.titleWithIcon}>
+                            <Eye className={styles.sectionIcon} />
+
+                            <h2 className={styles.sectionTitle}>
+                                <span className={styles.desktopTitle}>SEE SOME OF OUR WORK</span>
+                                <span className={styles.mobileTitle}>OUR WORK</span>
+                            </h2>
                         </div>
+
                     </div>
 
-                    <div className="carousel-controls">
+                    <div className={styles.carouselControls}>
                         <button
                             onClick={goToPrevious}
                             disabled={currentIndex === 0}
-                            className="carousel-arrow"
+                            className={styles.carouselArrow}
                             aria-label="Previous projects"
                         >
-                            <ChevronLeft className="arrow-icon" />
+                            <ChevronLeft className={styles.arrowIcon} />
                         </button>
-                        
+
                         <button
                             onClick={goToNext}
                             disabled={currentIndex === maxIndex}
-                            className="carousel-arrow"
+                            className={styles.carouselArrow}
                             aria-label="Next projects"
                         >
-                            <ChevronRight className="arrow-icon" />
+                            <ChevronRight className={styles.arrowIcon} />
                         </button>
+                        
                     </div>
                 </div>
 
-                <div className="projects-carousel" ref={carouselRef}>
+                <div className={styles.projectsCarousel} ref={carouselRef}>
                     <div
-                        className="projects-track"
+                        className={styles.projectsTrack}
                         style={{
                         transform: `translateX(calc(-${currentIndex * 100}% / ${projects.length} * ${visibleProjects}))`,
                         }}
                     >
                         {projects.map((project, index) => (
-                            <div key={index} className="project-card-new">
-                                <div className="project-header">
-                                    <h3 className="project-title-new">{project.title}</h3>
+                            <div key={index} className={styles.projectCard}>
+                                <div className={styles.projectHeader}>
+                                    <h3 className={styles.projectTitle}>{project.title}</h3>
                                 </div>
 
-                                <div className="project-image-new">
+                                <div className={styles.projectImage}>
                                     <img src={project.image || "/placeholder"} alt={project.title} />
-                                    
-                                    <div className="project-hover-overlay">
-                                        <div className="project-tags">
+
+                                    <div className={styles.projectHoverOverlay}>
+                                        <div className={styles.projectTags}>
                                             {project.tags.map((tag, tagIndex) => (
-                                                <span key={tagIndex} className="project-tag">
+                                                <span key={tagIndex} className={styles.projectTag}>
                                                     {tag}
                                                 </span>
                                             ))}
@@ -127,7 +142,6 @@ export default function WorkSection() {
                         ))}
                     </div>
                 </div>
-
             </div>
         </section>
     )
