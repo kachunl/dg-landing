@@ -74,11 +74,11 @@ export default function Header() {
                 </div>
 
                 <nav className={`${styles.nav} ${styles.desktopNav}`}>
-                    <button onClick={() => scrollToSection("work")} className={styles.navLink}>
+                    <button onClick={() => scrollToSection("about")} className={styles.navLink}>
                         Who We Are
                     </button>
 
-                    <button onClick={() => scrollToSection("about")} className={styles.navLink}>
+                    <button onClick={() => scrollToSection("work")} className={styles.navLink}>
                         What We Do
                     </button>
 
@@ -92,11 +92,11 @@ export default function Header() {
                 </button>
 
                 <nav className={`${styles.mobileNav} ${isMobileMenuOpen ? styles.open : ""}`}>
-                    <button onClick={() => scrollToSection("work")} className={styles.mobileNavLink}>
+                    <button onClick={() => scrollToSection("about")} className={styles.mobileNavLink}>
                         Who We Are
                     </button>
 
-                    <button onClick={() => scrollToSection("about")} className={styles.mobileNavLink}>
+                    <button onClick={() => scrollToSection("work")} className={styles.mobileNavLink}>
                         What We Do
                     </button>
 
