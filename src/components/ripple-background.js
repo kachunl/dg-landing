@@ -22,7 +22,7 @@ export default function RippleBackground() {
                 left: 0;
                 width: 100%;
                 height: 100%;
-                background-image: url(/digigoat-hero-mobile.png);
+                background-image: url(/dg-landing/digigoat-hero-mobile.png);
                 background-size: cover;
                 background-position: center;
             `
@@ -45,7 +45,7 @@ export default function RippleBackground() {
                 left: 0;
                 width: 100%;
                 height: 100%;
-                background-image: url(/digigoat-hero.png);
+                background-image: url(/dg-landing/digigoat-hero.png);
                 background-size: cover;
                 background-position: center;
                 transition: transform 0.1s ease-out;
@@ -269,7 +269,7 @@ export default function RippleBackground() {
                 console.error("Failed to load desktop image")
             }
 
-            image.src = "/digigoat-hero.png"
+            image.src = "/dg-landing/digigoat-hero.png"
         }
 
         function resize() {

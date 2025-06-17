@@ -126,15 +126,15 @@ export default function WorkSection() {
                                 </div>
 
                                 <div className={styles.projectImage}>
-                                    {/* <img src={project.image || "/placeholder"} alt={project.title} /> */}
+                                    <img src={project.image || "/placeholder"} alt={project.title} />
 
-                                    <Image 
+                                    {/* <Image 
                                         src={project.image || "/placeholder"} 
                                         alt={project.title}
                                         width={400}
                                         height={300}
                                         className={styles.projectImageElement}
-                                    />
+                                    /> */}
 
                                     <div className={styles.projectHoverOverlay}>
                                         <div className={styles.projectTags}>
