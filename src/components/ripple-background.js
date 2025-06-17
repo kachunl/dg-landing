@@ -228,7 +228,7 @@ export default function RippleBackground() {
             const image = new Image()
             image.crossOrigin = "anonymous"
             image.onload = () => {
-                console.log('Image loaded successfully')
+                console.log("Image loaded successfully")
                 gl.bindTexture(gl.TEXTURE_2D, texture)
                 
                 const tempCanvas = document.createElement("canvas")

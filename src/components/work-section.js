@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect } from "react"
 import { Eye, ChevronLeft, ChevronRight } from "lucide-react"
+import Image from "next/image"
 import styles from "@/styles/work.module.css"
 
 export default function WorkSection() {
@@ -125,7 +126,15 @@ export default function WorkSection() {
                                 </div>
 
                                 <div className={styles.projectImage}>
-                                    <img src={project.image || "/placeholder"} alt={project.title} />
+                                    {/* <img src={project.image || "/placeholder"} alt={project.title} /> */}
+
+                                    <Image 
+                                        src={project.image || "/placeholder"} 
+                                        alt={project.title}
+                                        width={400}
+                                        height={300}
+                                        className={styles.projectImageElement}
+                                    />
 
                                     <div className={styles.projectHoverOverlay}>
                                         <div className={styles.projectTags}>

@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
+import Image from "next/image"
 import { Menu, X } from "lucide-react"
 import styles from "@/styles/header.module.css"
 
@@ -70,7 +71,8 @@ export default function Header() {
         >
             <div className={styles.headerContainer}>
                 <div className={styles.logo}>
-                    <img src="/digigoat-logo-2.png" alt="DIGIGOAT" className={styles.logoImage} />
+                    {/* <img src="/digigoat-logo-2.png" alt="DIGIGOAT" className={styles.logoImage} /> */}
+                    <Image src="/digigoat-logo-2.png" alt="DIGIGOAT" className={styles.logoImage} width={200} height={50} />
                 </div>
 
                 <nav className={`${styles.nav} ${styles.desktopNav}`}>
@@ -83,7 +85,7 @@ export default function Header() {
                     </button>
 
                     <button onClick={() => scrollToSection("footer")} className={styles.navLink}>
-                        Let's Chat
+                        {"Let's Chat"}
                     </button>
                 </nav>
 
@@ -101,7 +103,7 @@ export default function Header() {
                     </button>
 
                     <button onClick={() => scrollToSection("footer")} className={styles.mobileNavLink}>
-                        Let's Chat
+                        {"Let's Chat"}
                     </button>
                 </nav>
 
