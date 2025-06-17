@@ -1,11 +1,11 @@
 Visit the live site: https://kachunl.github.io/dg-landing/
 
-***Prerequisites:***
+# ***Prerequisites:***
 
 Node.js 18+
-npm or yarn
+npm *or* yarn
 
-***Installation:***
+# ***Installation:***
 
 **Clone the repository:**
 
@@ -15,23 +15,23 @@ cd dg-landing
 **Install dependencies:**
 
 npm install
-# or
+*or*
 yarn install
 
 **Create environment file:**
 
-# Copy the example env file
+*copy the example env file*
 cp .env.example .env.local
 
 **Start the development server:**
 
 npm run dev
-# or
+*or*
 yarn dev
 
 **Open http://localhost:3000 in your browser.**
 
-***Manual deployment:***
+# ***Manual deployment:***
 
 Build the static export: npm run build
 The built files will be in the out/ directory
