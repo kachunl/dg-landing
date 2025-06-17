@@ -12,22 +12,26 @@ npm *or* yarn
 git clone https://github.com/kachunl/dg-landing.git
 cd dg-landing
 
+
 **Install dependencies:**
 
 npm install
 *or*
 yarn install
 
+
 **Create environment file:**
 
 *copy the example env file*
 cp .env.example .env.local
+
 
 **Start the development server:**
 
 npm run dev
 *or*
 yarn dev
+
 
 **Open http://localhost:3000 in your browser.**
 
