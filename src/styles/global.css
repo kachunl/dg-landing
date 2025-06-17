@@ -1,31 +1,32 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 body {
-  font-family: "Arial", sans-serif;
-  background-color: rgb(0, 0, 0);
-  color: #333;
-  line-height: 1.6;
+    font-family: "Arial", sans-serif;
+    background-color: rgb(0, 0, 0);
+    color: #333;
+    line-height: 1.6;
 }
 
 .studio-page {
-  min-height: 100vh;
-  position: relative;
+    min-height: 100vh;
+    position: relative;
 }
 
 @keyframes bounce {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
 }
