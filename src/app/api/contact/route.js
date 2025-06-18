@@ -1,5 +1,19 @@
 const nodemailer = require("nodemailer");
 
+export async function GET() {
+    return Response.json(
+        { 
+            message: "Contact API is working!",
+            timestamp: new Date().toISOString(),
+            env_check: {
+                EMAIL_USER: !!process.env.EMAIL_USER,
+                EMAIL_PASS: !!process.env.EMAIL_PASS
+            }
+        },
+        { status: 200 }
+    );
+}
+
 export async function POST(request) {
     try {
         const { name, email, subject, message } = await request.json();
