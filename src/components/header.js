@@ -88,7 +88,7 @@ export default function Header() {
                         What We Do
                     </button>
 
-                    <button onClick={() => scrollToSection("footer")} className={styles.navLink}>
+                    <button onClick={() => scrollToSection("contact")} className={styles.navLink}>
                         {"Let's Chat"}
                     </button>
                 </nav>
@@ -106,7 +106,7 @@ export default function Header() {
                         What We Do
                     </button>
 
-                    <button onClick={() => scrollToSection("footer")} className={styles.mobileNavLink}>
+                    <button onClick={() => scrollToSection("contact")} className={styles.mobileNavLink}>
                         {"Let's Chat"}
                     </button>
                 </nav>
