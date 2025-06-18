@@ -1,6 +1,10 @@
 import { ArrowUpRight } from "lucide-react"
 import styles from "@/styles/footer.module.css"
 
+const basePath = process.env.NODE_ENV === "production"
+    ? (process.env.NEXT_PUBLIC_BASE_PATH || "/dg-landing")
+    : ""
+
 export default function Footer() {
     return (
         <footer id="footer" className={styles.footer}>
@@ -34,17 +38,7 @@ export default function Footer() {
                         </div>
 
                         <div className={styles.footerRight}>
-                            <div className={styles.footerContactInfo}>
-                                <div className={styles.contactItem}>
-                                    <span className={styles.contactLabel}>EMAIL</span>
-                                    <span className={styles.contactValue}>ezramavani@thedigigoat.com</span>
-                                </div>
-
-                                <div className={styles.contactItem}>
-                                    <span className={styles.contactLabel}>PHONE</span>
-                                    <span className={styles.contactValue}>+60 123-4567</span>
-                                </div>
-                            </div>
+                            <img src={`${basePath}/digigoat-footer-2.png`} alt="DIGIGOAT Logo" className={styles.footerLogo} />
 
                             <div className={styles.footerAddress}>42 Puncak Street, Ampang, KL 43000</div>
                         </div>
