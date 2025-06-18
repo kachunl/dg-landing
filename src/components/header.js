@@ -11,10 +11,6 @@ export default function Header() {
     const [lastScrollY, setLastScrollY] = useState(0)
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
-    const basePath = process.env.NODE_ENV === "production"
-        ? (process.env.NEXT_PUBLIC_BASE_PATH || "/dg-landing")
-        : ""
-
     useEffect(() => {
         const handleScroll = () => {
             const currentScrollY = window.scrollY
@@ -75,7 +71,7 @@ export default function Header() {
         >
             <div className={styles.headerContainer}>
                 <div className={styles.logo}>
-                    <img src={`${basePath}/digigoat-logo-2.png`} alt="DIGIGOAT" className={styles.logoImage} />
+                    <img src="/digigoat-logo-2.png" alt="DIGIGOAT" className={styles.logoImage} />
                     {/* <Image src="/digigoat-logo-2.png" alt="DIGIGOAT" className={styles.logoImage} width={200} height={50} /> */}
                 </div>
 

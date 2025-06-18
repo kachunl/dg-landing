@@ -8,10 +8,6 @@ export default function RippleBackground() {
     const mousePos = useRef({ x: 0, y: 0 })
     const ripples = useRef([])
 
-    const basePath = process.env.NODE_ENV === "production"
-        ? (process.env.NEXT_PUBLIC_BASE_PATH || "/dg-landing")
-        : ""
-
     useEffect(() => {
         if (!containerRef.current) return
 
@@ -26,7 +22,7 @@ export default function RippleBackground() {
                 left: 0;
                 width: 100%;
                 height: 100%;
-                background-image: url(${basePath}/digigoat-hero-mobile.png);
+                background-image: url(/digigoat-hero-mobile.png);
                 background-size: cover;
                 background-position: center;
             `
@@ -49,7 +45,7 @@ export default function RippleBackground() {
                 left: 0;
                 width: 100%;
                 height: 100%;
-                background-image: url(${basePath}/digigoat-hero.png);
+                background-image: url(/digigoat-hero.png);
                 background-size: cover;
                 background-position: center;
                 transition: transform 0.1s ease-out;
@@ -273,7 +269,7 @@ export default function RippleBackground() {
                 console.error("Failed to load desktop image")
             }
 
-            image.src = `${basePath}/digigoat-hero.png`
+            image.src = "/digigoat-hero.png"
         }
 
         function resize() {

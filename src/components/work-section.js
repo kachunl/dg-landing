@@ -10,10 +10,6 @@ export default function WorkSection() {
     const [visibleProjects, setVisibleProjects] = useState(3)
     const carouselRef = useRef(null)
 
-    const basePath = process.env.NODE_ENV === "production"
-        ? (process.env.NEXT_PUBLIC_BASE_PATH || "/dg-landing")
-        : ""
-
     const projects = [
         {
             title: "G-Natural",
@@ -130,7 +126,7 @@ export default function WorkSection() {
                                 </div>
 
                                 <div className={styles.projectImage}>
-                                    <img src={project.image || `${basePath}/placeholder.png`} alt={project.title} />
+                                    <img src={project.image || "/placeholder.png"} alt={project.title} />
 
                                     {/* <Image 
                                         src={project.image || `${basePath}/placeholder.png`} 
