@@ -363,7 +363,7 @@ export default function RippleBackground() {
                 cancelAnimationFrame(animationRef.current)
             }
         }
-    }, [basePath])
+    }, [])
 
     return (
         <div 
