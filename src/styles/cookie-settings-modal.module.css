@@ -1,0 +1,192 @@
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+    padding: 2rem;
+}
+
+.modalContent {
+    background: #fff;
+    width: 100%;
+    max-width: 500px;
+    max-height: 80vh;
+    overflow-y: auto;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.modalHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 1.5rem 1rem 1.5rem;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.modalTitle {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #333;
+    margin: 0;
+}
+
+.closeButton {
+    background: none;
+    border: none;
+    color: #666;
+    cursor: pointer;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.3s ease;
+}
+
+.closeButton:hover {
+    color: #333;
+}
+
+.closeIcon {
+    width: 20px;
+    height: 20px;
+}
+
+.modalBody {
+    padding: 1.5rem;
+}
+
+.cookieSection {
+    margin-bottom: 2rem;
+}
+
+.cookieSection:last-child {
+    margin-bottom: 0;
+}
+
+.cookieHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.75rem;
+}
+
+.cookieTitle {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #333;
+    margin: 0;
+}
+
+.cookieDescription {
+    font-size: 0.875rem;
+    color: #666;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.toggle {
+    position: relative;
+    width: 48px;
+    height: 24px;
+    background: #e5e5e5;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.toggle:hover:not(.toggleDisabled) {
+    background: #d1d5db;
+}
+
+.toggleActive {
+    background: #333;
+}
+
+.toggleActive:hover {
+    background: #555;
+}
+
+.toggleDisabled {
+    background: #f3f4f6;
+    cursor: not-allowed;
+}
+
+.toggleSlider {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.toggleActive .toggleSlider {
+    transform: translateX(24px);
+}
+
+.toggleDisabled .toggleSlider {
+    background: #e5e5e5;
+    transform: translateX(24px);
+}
+
+.modalFooter {
+    padding: 1rem 1.5rem 1.5rem 1.5rem;
+    border-top: 1px solid #e5e5e5;
+}
+
+.saveButton {
+    width: 100%;
+    background: #333;
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.saveButton:hover {
+    background: #555;
+}
+
+@media (max-width: 768px) {
+    .modalOverlay {
+        padding: 1rem;
+    }
+
+    .modalContent {
+        max-height: 90vh;
+    }
+
+    .modalHeader {
+        padding: 1rem 1rem 0.75rem 1rem;
+    }
+
+    .modalTitle {
+        font-size: 1.1rem;
+    }
+
+    .modalBody {
+        padding: 1rem;
+    }
+
+    .cookieSection {
+        margin-bottom: 1.5rem;
+    }
+
+    .modalFooter {
+        padding: 0.75rem 1rem 1rem 1rem;
+    }
+}
