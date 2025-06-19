@@ -104,7 +104,7 @@
 .projectCard {
     flex: 0 0 calc(33.333% - 1.33rem);
     margin-right: 2rem;
-    background: #fff;
+    background: #333;
     transition: all 0.3s ease;
     cursor: pointer;
     position: relative;
@@ -117,7 +117,7 @@
 
 .projectCard:hover {
     transform: translateY(-5px);
-    background: #ffffff;
+    background: #575656;
 }
 
 .projectHeader {
@@ -132,7 +132,7 @@
 .projectTitle {
     font-size: 1.1rem;
     font-weight: 500;
-    color: #333;
+    color: #fff;
     text-transform: uppercase;
     letter-spacing: 1px;
     margin: 0;

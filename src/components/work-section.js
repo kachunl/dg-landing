@@ -13,34 +13,34 @@ export default function WorkSection() {
     const projects = [
         {
             title: "G-Natural",
-            image: "",
-            tags: ["BRANDING", "E-COMMERCE", "SEO", "MARKETING"],
-        },
-        {
-            title: "Autonomous Odyssey",
-            image: "",
-            tags: ["SEO", "DESIGN"],
-        },
-        {
-            title: "Ballet Nights",
-            image: "",
-            tags: ["BRANDING", "UI/UX", "SOCIAL MEDIA"],
+            image: "/projects/gnatural.png",
+            tags: ["BRAND STRATEGY", "E-COMMERCE DEVELOPMENT", "SEO", "UI & UX DESIGN"],
+            link: "https://www.g-natural.com"
         },
         {
             title: "Enshrined",
-            image: "",
-            tags: ["Kickstarter", "BRANDING", "WEB DEVELOPMENT", "SEO"],
+            image: "/projects/enshrined.png",
+            tags: ["DIGITAL MARKETING", "SEO", "UI & UX DESIGN", "CONTENT CREATION", "SOCIAL MEDIA MANAGEMENT"],
+            link: "https://www.enshrined.ca"
         },
         {
-            title: "Spazio",
-            image: "",
-            tags: ["SEO", "MARKETING", "SOCIAL MEDIA"],
+            title: "Global IT Star",
+            image: "/projects/globalitstar.png",
+            tags: ["DIGITAL MARKETING", "SEO", "UI & UX DESIGN"],
+            link: "https://www.globalitstar.com/"
         },
         {
-            title: "Lavinia",
-            image: "",
-            tags: ["SEO", "MARKETING", "SOCIAL MEDIA"],
+            title: "Ballet Nights",
+            image: "/projects/bn.png",
+            tags: ["WEBSITE DEVELOPMENT", "UI & UX DESIGN", "BACKEND AUTOMATIONS", "CONTENT CREATION", "ANALYTICS & REPORTING"],
+            link: "https://www.balletnights.com/"
         },
+        {
+            title: "Fundamentally Dance",
+            image: "/projects/fd.png",
+            tags: ["WEBSITE DEVELOPMENT", "BACKEND AUTOMATIONS", "ANALYTICS & REPORTING"],
+            link: "https://www.fundamentallydance.com/"
+        }
     ]
 
     // update visible projects count based on screen size
@@ -73,6 +73,12 @@ export default function WorkSection() {
         setCurrentIndex((prev) => Math.min(maxIndex, prev + 1))
     }
 
+    const handleProjectClick = (link) => {
+        if (link) {
+            window.open(link, "_blank", "noopener,noreferrer")
+        }
+    }
+
     return (
         <section id="work" className={styles.workSection}>
             <div className={styles.sectionContainer}>
@@ -83,8 +89,8 @@ export default function WorkSection() {
                             <Eye className={styles.sectionIcon} />
 
                             <h2 className={styles.sectionTitle}>
-                                <span className={styles.desktopTitle}>SEE SOME OF OUR WORK</span>
-                                <span className={styles.mobileTitle}>OUR WORK</span>
+                                <span className={styles.desktopTitle}>OUR PORTFOLIO</span>
+                                <span className={styles.mobileTitle}>OUR PORTFOLIO</span>
                             </h2>
                         </div>
 
@@ -120,7 +126,23 @@ export default function WorkSection() {
                         }}
                     >
                         {projects.map((project, index) => (
-                            <div key={index} className={styles.projectCard}>
+                            // <div key={index} className={styles.projectCard}>
+                            <div 
+                                key={index} 
+                                className={styles.projectCard}
+                                onClick={() => handleProjectClick(project.link)}
+                                style={{ cursor: project.link ? "pointer" : "default" }}
+                                role={project.link ? "button" : undefined}
+                                tabIndex={project.link ? 0 : undefined}
+                                onKeyDown={(e) => {
+                                    if (project.link && (e.key === "Enter" || e.key === " ")) {
+                                        e.preventDefault()
+                                        handleProjectClick(project.link)
+                                    }
+                                }}
+                                aria-label={project.link ? `View ${project.title} project` : undefined}
+                            >    
+                                
                                 <div className={styles.projectHeader}>
                                     <h3 className={styles.projectTitle}>{project.title}</h3>
                                 </div>
