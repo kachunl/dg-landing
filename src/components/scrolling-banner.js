@@ -6,14 +6,15 @@ export default function ScrollingBanner() {
     const services = [
         "Conversion Optimisation",
         "E-Commerce Development",
-        "Shopify Migration",
         "UI & UX Design",
         "Brand Strategy",
         "Digital Marketing",
-        "SEO Optimisation",
+        "Search Engine Optimisation",
         "Social Media Management",
         "Content Creation",
         "Analytics & Reporting",
+        "Website Development",
+        "Backend Automations" 
     ]
 
     return (
