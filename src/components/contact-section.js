@@ -80,22 +80,22 @@ export default function ContactSection() {
                     <div className={styles.titleWithIcon}>
                         <MessageCircle className={styles.sectionIcon} />
 
-                        <h2 className={styles.sectionTitle}>LET'S CHAT</h2>
+                        <h2 className={styles.sectionTitle}>GET IN TOUCH</h2>
                     </div>
                 </div>
 
                 <div className={styles.contactContent}>
                     <div className={styles.contactInfo}>
                         <p className={styles.contactDescription}>
-                            Ready to start your next project?
+                            Got an idea? Why wait.
                         </p>
 
                         <div className={styles.contactDetails}>
-                            <a href="mailto:ezramavani@thedigigoat.com" className={styles.contactLink}>
-                                ezramavani@thedigigoat.com
+                            <a href="mailto:ezra@thedigigoat.com" className={styles.contactLink}>
+                                ezra@thedigigoat.com
                             </a>
-                            <a href="tel:+601234567890" className={styles.contactLink}>
-                                +60 1234 567-890
+                            <a href="tel:+60 19570 3310" className={styles.contactLink}>
+                                +60 19570 3310
                             </a>
                         </div>
                     </div>

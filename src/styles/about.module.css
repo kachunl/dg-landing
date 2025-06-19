@@ -44,6 +44,13 @@
 }
 
 .aboutContent {
+    font-size: 2rem;
+    font-weight: 300;
+    line-height: 1.2;
+    color: #ffffff;
+}
+
+/* .aboutContent {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
@@ -62,7 +69,7 @@
     line-height: 1.6;
     color: #ffffff;
     margin-bottom: 2rem;
-}
+} */
 
 .underlined {
     text-decoration: underline;

@@ -62,7 +62,7 @@
 }
 
 .contactDescription {
-    font-size: 1.1rem;
+    font-size: 2rem;
     line-height: 1.6;
     color: #ffffff;
     margin-bottom: 2rem;
@@ -77,7 +77,7 @@
 .contactLink {
     color: #ffffff;
     text-decoration: none;
-    font-size: 1.1rem;
+    font-size: 1.5rem;
     transition: opacity 0.3s ease;
 }
 

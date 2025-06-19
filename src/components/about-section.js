@@ -17,7 +17,7 @@ export default function AboutSection() {
 
                 <div className={styles.aboutContent}>
 
-                    <div className={styles.aboutTextLeft}>
+                    {/* <div className={styles.aboutTextLeft}>
                         <p>
                             DIGIGOAT is a <span className={styles.underlined}>marketing</span> agency based in
                             Milan, Italy.
@@ -28,7 +28,17 @@ export default function AboutSection() {
                         <p>
                             We specialise in 
                         </p>
-                    </div>
+                    </div> */}
+
+                    DIGIGOAT is a <span className={styles.underlined}>results-driven</span> marketing agency specialising in website development and social media management.
+
+                    <br /><br />
+
+                    We help brands grow by building high-impact websites and managing digital content that captures attention and drives engagement.
+
+                    <br /><br />
+
+                    From design to delivery, we combine strategy, creativity, and performance to turn ideas into measurable success.
 
                 </div>
             </div>
