@@ -15,19 +15,19 @@ export default function Footer() {
                                 </p>
                                 
                                 <p className={styles.footerServices}>
-                                    Web Dev • Social Media • Brand Strategy
+                                    Strategic & Digital Marketing
                                 </p>
                                 
                                 <div className={styles.footerContactInfo}>
-                                    <a href="mailto:ezra@thedigigoat.com" className={styles.footerContactLink}>
-                                        ezra@thedigigoat.com
+                                    <a href="mailto:hello@thedigigoat.com" className={styles.footerContactLink}>
+                                        hello@thedigigoat.com
                                     </a>
 
-                                    <span className={styles.footerSeparator}> | </span>
+                                    {/* <span className={styles.footerSeparator}> | </span>
                                     
                                     <a href="tel:+60195703310" className={styles.footerContactLink}>
                                         +60 19570 3310
-                                    </a>
+                                    </a> */}
                                 </div>
 
                             </div>

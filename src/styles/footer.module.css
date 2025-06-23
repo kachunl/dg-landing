@@ -66,11 +66,11 @@
     color: #6320ff;
 }
 
-.footerSeparator {
+/* .footerSeparator {
     color: #ffffff;
     font-size: 1rem;
     padding: 0 0.4rem;
-}
+} */
 
 .footerRight {
     display: flex;

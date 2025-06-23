@@ -30,15 +30,15 @@ export default function AboutSection() {
                         </p>
                     </div> */}
 
-                    DIGIGOAT is a <span className={styles.underlined}>results-driven</span> marketing agency specialising in website development and social media management.
+                    DIGIGOAT is a <span className={styles.underlined}>results-driven</span> marketing agency specialising in strategic and digital marketing.
 
                     <br /><br />
 
-                    We help brands grow by building high-impact websites and managing digital content that captures attention and drives engagement.
-
+                    We support brands through data-driven strategies, hands off execution and impactful messaging.
+                    
                     <br /><br />
 
-                    From design to delivery, we combine strategy, creativity, and performance to turn ideas into measurable success.
+                    From strategies to your screens, we combine creativity, data, and performance to turn ideas into measurable success.
 
                 </div>
             </div>

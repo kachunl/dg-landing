@@ -91,12 +91,12 @@ export default function ContactSection() {
                         </p>
 
                         <div className={styles.contactDetails}>
-                            <a href="mailto:ezra@thedigigoat.com" className={styles.contactLink}>
-                                ezra@thedigigoat.com
+                            <a href="mailto:hello@thedigigoat.com" className={styles.contactLink}>
+                                hello@thedigigoat.com
                             </a>
-                            <a href="tel:+60 19570 3310" className={styles.contactLink}>
+                            {/* <a href="tel:+60 19570 3310" className={styles.contactLink}>
                                 +60 19570 3310
-                            </a>
+                            </a> */}
                         </div>
                     </div>
 

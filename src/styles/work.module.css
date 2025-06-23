@@ -104,7 +104,7 @@
 .projectCard {
     flex: 0 0 calc(33.333% - 1.33rem);
     margin-right: 2rem;
-    background: #333;
+    /* background: #333; */
     transition: all 0.3s ease;
     cursor: pointer;
     position: relative;
@@ -120,14 +120,14 @@
     background: #575656;
 }
 
-.projectHeader {
+/* .projectHeader {
     padding: 1.5rem 1.5rem 1rem 1.5rem;
     background: transparent;
     transition: all 0.3s ease;
     position: relative;
     z-index: 2;
     border-bottom: none;
-}
+} */
 
 .projectTitle {
     font-size: 1.1rem;
@@ -178,7 +178,7 @@
     transform: scale(1.05);
 }
 
-.projectHoverOverlay {
+/* .projectHoverOverlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -193,13 +193,13 @@
     justify-content: flex-end;
     padding: 1.5rem;
     z-index: 3;
-}
+} */
 
 .projectCard:hover .projectHoverOverlay {
     opacity: 1;
 }
 
-.projectTags {
+/* .projectTags {
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
@@ -220,7 +220,7 @@
 .projectTag:hover {
     background: white;
     color: black;
-}
+} */
 
 @media (max-width: 1024px) {
     .projectCard {

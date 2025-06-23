@@ -132,28 +132,27 @@ export default function WorkSection() {
                         }}
                     >
                         {projects.map((project, index) => (
-                            // <div key={index} className={styles.projectCard}>
-                            <div 
-                                key={index} 
-                                className={styles.projectCard}
-                                onClick={() => handleProjectClick(project.link)}
-                                style={{ cursor: project.link ? "pointer" : "default" }}
-                                role={project.link ? "button" : undefined}
-                                tabIndex={project.link ? 0 : undefined}
-                                onKeyDown={(e) => {
-                                    if (project.link && (e.key === "Enter" || e.key === " ")) {
-                                        e.preventDefault()
-                                        handleProjectClick(project.link)
-                                    }
-                                }}
-                                aria-label={project.link ? `View ${project.title} project` : undefined}
-                            >    
+                            <div key={index} className={styles.projectCard}> 
                                 
-                                <div className={styles.projectHeader}>
+                                {/* <div className={styles.projectHeader}>
                                     <h3 className={styles.projectTitle}>{project.title}</h3>
-                                </div>
+                                </div> */}
 
-                                <div className={styles.projectImage}>
+                                <div 
+                                    key={index} 
+                                    className={styles.projectImage}
+                                    onClick={() => handleProjectClick(project.link)}
+                                    style={{ cursor: project.link ? "pointer" : "default" }}
+                                    role={project.link ? "button" : undefined}
+                                    tabIndex={project.link ? 0 : undefined}
+                                    onKeyDown={(e) => {
+                                        if (project.link && (e.key === "Enter" || e.key === " ")) {
+                                            e.preventDefault()
+                                            handleProjectClick(project.link)
+                                        }
+                                    }}
+                                    aria-label={project.link ? `View ${project.title} project` : undefined}
+                                >                                       
                                     <img src={project.image || "/placeholder.png"} alt={project.title} />
 
                                     {/* <Image 
@@ -164,7 +163,7 @@ export default function WorkSection() {
                                         className={styles.projectImageElement}
                                     /> */}
 
-                                    <div className={styles.projectHoverOverlay}>
+                                    {/* <div className={styles.projectHoverOverlay}>
                                         <div className={styles.projectTags}>
                                             {project.tags.map((tag, tagIndex) => (
                                                 <span key={tagIndex} className={styles.projectTag}>
@@ -172,7 +171,7 @@ export default function WorkSection() {
                                                 </span>
                                             ))}
                                         </div>
-                                    </div>
+                                    </div> */}
 
                                 </div>
                             </div>
