@@ -14,7 +14,7 @@ export default function ScrollingBanner() {
         "Content Creation",
         "Analytics & Reporting",
         "Website Development",
-        "Backend Automations" 
+        "Backend Automations"
     ]
 
     return (
