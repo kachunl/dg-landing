@@ -12,10 +12,10 @@ export default function WorkSection() {
 
     const projects = [
         {
-            title: "G-Natural",
-            image: "/projects/gnatural.png",
-            tags: ["BRAND STRATEGY", "E-COMMERCE DEVELOPMENT", "SEO", "UI & UX DESIGN"],
-            link: "https://www.g-natural.com"
+            title: "Ballet Nights",
+            image: "/projects/bn.png",
+            tags: ["WEBSITE DEVELOPMENT", "UI & UX DESIGN", "BACKEND AUTOMATIONS", "CONTENT CREATION", "ANALYTICS & REPORTING"],
+            link: "https://www.balletnights.com/"
         },
         {
             title: "Enshrined",
@@ -24,22 +24,28 @@ export default function WorkSection() {
             link: "https://www.enshrined.ca"
         },
         {
+            title: "G-Natural",
+            image: "/projects/gnatural.png",
+            tags: ["BRAND STRATEGY", "E-COMMERCE DEVELOPMENT", "SEO", "UI & UX DESIGN"],
+            link: "https://www.g-natural.com"
+        },
+        {
             title: "Global IT Star",
             image: "/projects/globalitstar.png",
             tags: ["DIGITAL MARKETING", "SEO", "UI & UX DESIGN"],
             link: "https://www.globalitstar.com/"
         },
         {
-            title: "Ballet Nights",
-            image: "/projects/bn.png",
-            tags: ["WEBSITE DEVELOPMENT", "UI & UX DESIGN", "BACKEND AUTOMATIONS", "CONTENT CREATION", "ANALYTICS & REPORTING"],
-            link: "https://www.balletnights.com/"
-        },
-        {
             title: "Fundamentally Dance",
             image: "/projects/fd.png",
             tags: ["WEBSITE DEVELOPMENT", "BACKEND AUTOMATIONS", "ANALYTICS & REPORTING"],
             link: "https://www.fundamentallydance.com/"
+        },
+        {
+            title: "Sunoracle Games",
+            image: "/projects/sog.png",
+            tags: [],
+            link: "https://www.sunoraclegames.com/"
         },
         {
             title: "The Other Collection",
