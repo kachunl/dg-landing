@@ -47,7 +47,8 @@
 }
 
 .navLink {
-    background: none;
+    /* background: none; */
+    background: rgba(0, 0, 0, 0.2);
     border: none;
     color: #ffffff;
     font-size: 1.2rem;
@@ -56,7 +57,10 @@
     transition: opacity 0.3s ease;
     letter-spacing: 1px;
     position: relative;
-    padding: 0.8rem 0 0.2rem 0;
+    padding: 0.5rem 0 0.5rem 0;
+    border-radius: 8px;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
 }
 
 .navLink::after {
