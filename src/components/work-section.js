@@ -40,6 +40,12 @@ export default function WorkSection() {
             image: "/projects/fd.png",
             tags: ["WEBSITE DEVELOPMENT", "BACKEND AUTOMATIONS", "ANALYTICS & REPORTING"],
             link: "https://www.fundamentallydance.com/"
+        },
+        {
+            title: "The Other Collection",
+            image: "/projects/toc.png",
+            tags: [],
+            link: "https://www.theothercollections.com/"
         }
     ]
 

@@ -139,7 +139,7 @@
     transition: color 0.3s ease;
 }
 
-.projectImage {
+/* .projectImage {
     position: relative;
     overflow: hidden;
     aspect-ratio: 4 / 3;
@@ -150,7 +150,29 @@
     height: 100%;
     object-fit: cover;
     transition: transform 0.3s ease;
+} */
+
+
+.projectImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Fits entire image within container */
+    object-position: center; /* Centers the image */
+    transition: transform 0.3s ease;
+    display: block;
 }
+
+/* Update your .projectImage container: */
+.projectImage {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 4 / 3;
+    /* background: #222; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 
 .projectCard:hover .projectImage img {
     transform: scale(1.05);
