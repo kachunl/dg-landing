@@ -30,12 +30,6 @@ export default function WorkSection() {
             link: "https://www.g-natural.com"
         },
         {
-            title: "Global IT Star",
-            image: "/projects/globalitstar.png",
-            tags: ["DIGITAL MARKETING", "SEO", "UI & UX DESIGN"],
-            link: "https://www.globalitstar.com/"
-        },
-        {
             title: "Fundamentally Dance",
             image: "/projects/fd.png",
             tags: ["WEBSITE DEVELOPMENT", "BACKEND AUTOMATIONS", "ANALYTICS & REPORTING"],
@@ -61,7 +55,6 @@ export default function WorkSection() {
             if (window.innerWidth <= 768) {
                 setVisibleProjects(1)
             } 
-            
             else {
                 setVisibleProjects(3)
             }
@@ -75,6 +68,15 @@ export default function WorkSection() {
         return () => window.removeEventListener("resize", updateVisibleProjects)
     }, [])
 
+    // reset currentIndex when visibleProjects changes to prevent overflow
+    useEffect(() => {
+        const maxIndex = Math.max(0, projects.length - visibleProjects)
+
+        if (currentIndex > maxIndex) {
+            setCurrentIndex(maxIndex)
+        }
+    }, [visibleProjects, currentIndex, projects.length])
+
     const maxIndex = Math.max(0, projects.length - visibleProjects)
 
     const goToPrevious = () => {
@@ -85,9 +87,22 @@ export default function WorkSection() {
         setCurrentIndex((prev) => Math.min(maxIndex, prev + 1))
     }
 
-    const handleProjectClick = (link) => {
+    const handleProjectClick = (e, link) => {
+        e.stopPropagation()
+
         if (link) {
             window.open(link, "_blank", "noopener,noreferrer")
+        }
+    }
+
+    // calculate transform based on screen size
+    const getTransform = () => {
+        if (visibleProjects === 1) {
+            return `translateX(-${currentIndex * 100}%)`
+        }
+        
+        else {
+            return `translateX(calc(-${currentIndex * 100}% / ${projects.length} * ${visibleProjects}))`
         }
     }
 
@@ -134,51 +149,27 @@ export default function WorkSection() {
                     <div
                         className={styles.projectsTrack}
                         style={{
-                        transform: `translateX(calc(-${currentIndex * 100}% / ${projects.length} * ${visibleProjects}))`,
+                            transform: getTransform(),
                         }}
                     >
                         {projects.map((project, index) => (
                             <div key={index} className={styles.projectCard}> 
                                 
-                                {/* <div className={styles.projectHeader}>
-                                    <h3 className={styles.projectTitle}>{project.title}</h3>
-                                </div> */}
-
                                 <div 
-                                    key={index} 
                                     className={styles.projectImage}
-                                    onClick={() => handleProjectClick(project.link)}
+                                    onClick={(e) => handleProjectClick(e, project.link)}
                                     style={{ cursor: project.link ? "pointer" : "default" }}
                                     role={project.link ? "button" : undefined}
                                     tabIndex={project.link ? 0 : undefined}
                                     onKeyDown={(e) => {
                                         if (project.link && (e.key === "Enter" || e.key === " ")) {
                                             e.preventDefault()
-                                            handleProjectClick(project.link)
+                                            handleProjectClick(e, project.link)
                                         }
                                     }}
                                     aria-label={project.link ? `View ${project.title} project` : undefined}
                                 >                                       
                                     <img src={project.image || "/placeholder.png"} alt={project.title} />
-
-                                    {/* <Image 
-                                        src={project.image || `${basePath}/placeholder.png`} 
-                                        alt={project.title}
-                                        width={400}
-                                        height={300}
-                                        className={styles.projectImageElement}
-                                    /> */}
-
-                                    {/* <div className={styles.projectHoverOverlay}>
-                                        <div className={styles.projectTags}>
-                                            {project.tags.map((tag, tagIndex) => (
-                                                <span key={tagIndex} className={styles.projectTag}>
-                                                    {tag}
-                                                </span>
-                                            ))}
-                                        </div>
-                                    </div> */}
-
                                 </div>
                             </div>
                         ))}

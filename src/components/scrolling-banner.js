@@ -4,17 +4,17 @@ import styles from "@/styles/scrolling-banner.module.css"
 
 export default function ScrollingBanner() {
     const services = [
-        "Conversion Optimisation",
-        "E-Commerce Development",
-        "UI & UX Design",
-        "Brand Strategy",
-        "Digital Marketing",
-        "Search Engine Optimisation",
-        "Social Media Management",
-        "Content Creation",
-        "Analytics & Reporting",
-        "Website Development",
-        "Backend Automations"
+        // "Conversion Optimisation",
+        // "E-Commerce Development",
+        // "UI & UX Design",
+        // "Brand Strategy",
+        // "Digital Marketing",
+        // "Search Engine Optimisation",
+        // "Social Media Management",
+        // "Content Creation",
+        // "Analytics & Reporting",
+        // "Website Development",
+        // "Backend Automations"
     ]
 
     return (
