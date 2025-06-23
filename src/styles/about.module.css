@@ -93,6 +93,11 @@
         font-size: 1.5rem;
     }
 
+    .aboutContent {
+        text-align: center;
+        font-size: 1.8rem;
+    }
+
     .aboutTextLeft p {
       font-size: 2rem;
     }
@@ -101,6 +106,11 @@
 @media (max-width: 480px) {
     .sectionTitle {
         font-size: 1.2rem;
+    }
+
+    .aboutContent {
+        text-align: center;
+        font-size: 1.5rem;
     }
 
     .aboutTextLeft p {

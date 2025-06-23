@@ -30,7 +30,8 @@ export default function AboutSection() {
                         </p>
                     </div> */}
 
-                    DIGIGOAT is a <span className={styles.underlined}>results-driven</span> marketing agency specialising in strategic marketing for niche sectors such as ballet productions, field-service IT providers, indie video game studios, osteotherapists and eco-conscious products.
+                    {/* DIGIGOAT is a <span className={styles.underlined}>results-driven</span> marketing agency specialising in strategic marketing for niche sectors such as ballet productions, field-service IT providers, indie video game studios, osteotherapists and eco-conscious products. */}
+                    DIGIGOAT is a results-driven marketing agency specialising in strategic marketing for niche sectors such as ballet productions, field-service IT providers, indie video game studios, osteotherapists and eco-conscious products.
 
                     {/* <br /><br />
 
