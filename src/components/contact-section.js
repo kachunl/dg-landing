@@ -87,7 +87,7 @@ export default function ContactSection() {
                 <div className={styles.contactContent}>
                     <div className={styles.contactInfo}>
                         <p className={styles.contactDescription}>
-                            Smart ideas deserve sharp execution. Let’s talk.
+                            Got something fun? Reach out.
                         </p>
 
                         <div className={styles.contactDetails}>
