@@ -15,6 +15,8 @@ export default function RippleBackground() {
         const isMobile = window.innerWidth <= 768 || /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
 
         if (isMobile) {
+            containerRef.current.style.height = "60vh"
+
             const mobileDiv = document.createElement("div")
             mobileDiv.style.cssText = `
                 position: absolute;
@@ -22,7 +24,7 @@ export default function RippleBackground() {
                 left: 0;
                 width: 100%;
                 height: 100%;
-                background-image: url(/digigoat-hero-mobile.png);
+                background-image: url(/digigoat-hero-mobile-4.png);
                 background-size: cover;
                 background-repeat: no-repeat;
                 background-position: center;
@@ -38,6 +40,7 @@ export default function RippleBackground() {
         if (!gl) {
             console.warn("WebGL not supported, using CSS fallback")
             
+            containerRef.current.style.height = "100vh"
             // css fallback
             const fallbackDiv = document.createElement("div")
             fallbackDiv.style.cssText = `
