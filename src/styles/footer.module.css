@@ -11,9 +11,8 @@
 }
 
 .footerContainer {
-    max-width: 1400px;
     margin: 0 auto;
-    padding: 0 3rem;
+    padding: 0 20rem 0 20rem;
 }
 
 .footerContent {

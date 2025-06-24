@@ -31,8 +31,7 @@ export default function AboutSection() {
                     </div> */}
 
                     {/* DIGIGOAT is a <span className={styles.underlined}>results-driven</span> marketing agency specialising in strategic marketing for niche sectors such as ballet productions, field-service IT providers, indie video game studios, osteotherapists and eco-conscious products. */}
-                    DIGIGOAT is a results-driven marketing agency specialising in strategic marketing for niche sectors such as ballet productions, field-service IT providers, indie video game studios, osteotherapists and eco-conscious products.
-
+                    DIGIGOAT specialises in strategic consultation in marketing and community development for boutique industries. We take what works in niche spaces and apply it creatively across sectors, whilst aligning marketing KPIs with your business's financial goals.
                     {/* <br /><br />
 
                     We support brands through data-driven strategies, hands off execution and impactful messaging.
