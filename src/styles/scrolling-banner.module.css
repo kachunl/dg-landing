@@ -1,7 +1,7 @@
 .scrollingBanner {
     background: #8b5cf6;
     color: #fff;
-    padding: 1rem 0;
+    /* padding: 1rem 0; */
     overflow: hidden;
     white-space: nowrap;
     position: relative;
