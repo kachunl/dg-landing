@@ -24,6 +24,7 @@ export default function RippleBackground() {
                 height: 100%;
                 background-image: url(/digigoat-hero-mobile.png);
                 background-size: cover;
+                background-repeat: no-repeat;
                 background-position: center;
             `
             containerRef.current.appendChild(mobileDiv)

@@ -116,8 +116,8 @@ export default function WorkSection() {
                             <Eye className={styles.sectionIcon} />
 
                             <h2 className={styles.sectionTitle}>
-                                <span className={styles.desktopTitle}>OUR PORTFOLIO</span>
-                                <span className={styles.mobileTitle}>OUR PORTFOLIO</span>
+                                <span className={styles.desktopTitle}>OUR CLIENTS</span>
+                                <span className={styles.mobileTitle}>OUR CLIENTS</span>
                             </h2>
                         </div>
 
