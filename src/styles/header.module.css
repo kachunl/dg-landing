@@ -159,20 +159,28 @@
     }
 
     .logoImage {
-        height: 35px;
+        height: 26px;
     }
 
     .headerContainer {
-        padding: 0 2rem;
+        padding: 0 1.5rem;
+    }
+
+    .header {
+        padding: 0.6rem 0;
     }
 }
 
 @media (max-width: 480px) {
     .logoImage {
-        height: 30px;
+        height: 24px;
     }
 
     .headerContainer {
-        padding: 0 1.5rem;
+        padding: 0 1rem;
+    }
+
+    .header {
+        padding: 0.5rem 0;
     }
 }
